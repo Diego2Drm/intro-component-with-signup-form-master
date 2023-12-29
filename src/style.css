@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ### Primary */
+  --Red: #ff7a7a;
+  --Green: #38cc8c;
+  --text: #fbe0e0;
+  /* ### Accent */
+  --Blue: #6055a5;
+  /* ### Neutral */
+  --Dark-Blue: #3f3d4a;
+  --Grayish-Blue: #b9b6d3;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: var(--Red);
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  padding-block-start: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.bg-img {
+  background: url(./images/bg-intro-mobile.png);
+  width: 100%;
+  height: 1100px;
+}
+.container__component {
+  width: 35rem;
+  height: auto;
+  /* margin: 0 auto; */
+  padding-block-start: 9rem;
+}
+
+/* Info */
+.container__component-info h1{
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+  padding-inline: 4rem;
+  margin-block-end: 2rem;
+}
+.container__component-info p{
+  text-align: center;
+  color: var(--text);
+  font-size: 1.6rem;
+  padding-inline: 2rem;
+  margin-block-end: 4rem;
+  font-weight: 400;
+}
+
+/* FORM */
+.form__container{
+  width: 100%;
+}
+
+.form__container .info-week{
+  background: var(--Blue);
+  text-align: center;
+  width: 100%;
+  height: 7rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.7rem;
+  color: #fff;
+  font-weight: 600;
+  margin-block-end: 3rem;
+  box-shadow:  0 .8rem 0 .1rem rgba(0,0,0,0.25);
+}
+.form__container .info-week p{
+display: inline-block;}
+
+.form__container .info-week span{
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+}
+
+.form__container form{
+  width: 100%;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow:  0 .8rem 0 .1rem rgba(0,0,0,0.38);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.form__container form div{
+  width: 100%;
+  position: relative;
+  margin-block-end: 3rem;
+}
+.form__container form div .icon--error{
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+}
+.form__container form div .info--error{
+  color: var(--Red);
+  width: 100%;
+  font-style: italic;
+  text-align: end;
+  font-weight: 500;
+}
+.inactive{
+  display: none;
+}
+.form__container form div input{
+  width: 100%;
+  height: 6rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--Grayish-Blue);
+  outline: none;
+  font-size: 1.6rem;
+}
+.form__container form input::placeholder{
+  color: #848388;
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+.form__container form input:focus{
+  border: 3px solid green;
+}
+.form__container form div .error{
+  border: 3px solid red;
+}
+.form__container form button{
+  background: var(--Green);
+  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 2rem;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  box-shadow:  0 -.5rem 0 0 rgba(0,0,0,0.20) inset;
+  margin-block-end: 2rem;
+  cursor: pointer;
+}
+.form__container form button:hover{
+  background: #6bf4b9;
+}
+.form__container form p{
+  color: var(--Grayish-Blue);
+  font-size: 1.2rem;
+  text-align: center;
+  padding-inline: 1rem;
+  font-weight: 500;
+}
+.form__container form p span a{
+  color: var(--Red);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+
+}
+
+@media (min-width: 1025px){
+  body{
+    overflow: hidden;
+  }
+  .container__component{
+    display: flex;  
+    width: 80%;
+    margin: 0 auto;
+  }
+  .bg-img{
+    background: url(./images/bg-intro-desktop.png);
+    height: 100vh;
+  }
+  /* info */
+  .container__component-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container__component-info h1{
+    font-size: 5rem;
+    padding-inline-end: 6rem;
+    text-align: start;
+  }
+  .container__component-info p{
+    font-size: 2rem;
+    text-align: start;
+  }
+
+
+  /* form */
+  .form__container{
+    padding-inline: 6rem;
+  }
+
+  .form__container .info-week{
+   text-align: start;
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   align-items: center;
+   gap: 1rem;
+  }
+  
+  br{
+    display: none;
+  }
+
+  footer{
+    margin-top: -10rem;
+  }
+}
+
+
+
+
+
+
